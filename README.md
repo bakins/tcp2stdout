@@ -39,3 +39,5 @@ Building
 ```
 go build .
 ````
+
+Also availible at https://quay.io/repository/bakins/tcp2stdout
