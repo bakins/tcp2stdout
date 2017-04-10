@@ -1,0 +1,17 @@
+language: go
+go:
+- 1.8.x
+notifications:
+  email: false
+install:
+- true
+script:
+- "./script/build"
+deploy:
+  provider: releases
+  api_key:
+    secure: QPRSeusNOw2bc+KdTA5DwtutOzbA1XnERPemoLVePSE2VdqpsFfabX6zIVOAEe2fF6t+k7OkDbesfQlHjBPk6/6NLOLXhg9Zd4eYA3UsJMO3341lHy6kWPQQsWX3JpebAxexx7aLUQFY6z94kdwva6ejwdLutQ8BUlctagvJAmcqOXVinb8cdmcUaD5GhAcDd9LPSBZ4WfeKCe4yRTTnqf9rBhW0Ipb2KBZfc5s9284KrNiqJiATrkWKcXn5lpnUGqp61jSCltRxiLyfsqYLHFnrxHHDJYNR43VDnv2vwTyFYx9uM6HytX5M6R7rQVj19RQlNz9P6y+17XQcIWEH5qTREE/ydsca5/nnhn/0rlhc9tz8LuVFZ25bd3s9Eq70Y/130w17/EoZN98yXjozxDx40tEt6zWqH/nw/MWL68OzGL84LnQJRaKTWK5Dqe3bgWaiEPq4CzTP45drL8//6y22QWThs0PEmwRWYOHZ8btcfnHVy81q0JxRll+DlKX1uqOXi9FcBZ7xadOQzI1c4R/2RxI7Phy6rEf0r11IJKeTiE1xmW+FhWfFRP47xmiCgai4NTt2uQ/LzmNJ0SKCumZ0jkwhhawuzFfKvPo9A1UVOwmUyFL5hN74gSDrsRsqBxKA9KLQtz4UA0j5J05sG4EBQgmlNpPGLf0/dNsLMXU=
+  file: tcp2stdout
+  on:
+    repo: bakins/tcp2stdout
+    tags: true
